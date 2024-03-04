@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 201px;
+  background-color: #096488;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar ul li {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+  border-bottom: 2px solid #448eacb4;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.sidebar li:hover {
+  background-color: #448eacb4;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 1px 16px;
+}
+
+/* single task item */
+
+.all-tasks {
+  margin-left: 200px;
+  width: 80%;
+}
+
+.all-tasks .all-tasks-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #333;
+  padding: 20px;
+}
+.all-tasks .task-container {
+  margin-top: 30px;
+  margin-left: 3px;
+}
+
+.all-tasks .task-container .task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  padding: 5px 10px;
+}
+
+.task-item button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.task-item p {
+  font-size: 18px;
+  color: #333;
+}
+
+.task-item form {
+  display: flex;
+  gap: 10px;
+}
+.delete {
+  background-color: #dc3545;
+}
+
+.done {
+  background-color: #28a745;
+}
+/* add a new task styles  */
+
+.new-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-task {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.add-task form {
+  margin-top: 30px;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-task input[type="text"] {
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.add-task button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background-color: #0056b3;
+}
+
+.add-task-title {
+  font-size: 40px;
+}
+
+/* about */
+
+.about h1 {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.about p {
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 10px;
+}
+.about ul {
+  margin-bottom: 20px;
+}
+.about li {
+  margin-bottom: 8px;
+}
+.about a {
+  color: #007bff;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+
+.fab {
+  border: 1px solid black;
+  padding: 5px;
+}
