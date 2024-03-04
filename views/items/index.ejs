@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs')%>
+  <body>
+    <%- include('../partials/nav.ejs')%>
+
+    <div class="all-tasks">
+      <h1 class="all-tasks-title">All tasks</h1>
+      <div class="task-container">
+        <% if(items.length > 0) { %> <% items.forEach(item => { %>
+        <div class="task-item">
+          <p><%= item.name %></p>
+          <form action="#">
+            <button class="done">Mark as complete</button>
+            <button class="delete">Delete</button>
+          </form>
+        </div>
+        <% }); %> <% } else { %>
+        <p>There are no tasks to show</p>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
