@@ -12,19 +12,36 @@ const items_get = (req, res) => {
 
 // create a new item
 
-const item_create_post = (req, res) => {
+const item_create_post = (req, res, next) => {
     const item = new Item(req.body);
     item
       .save()
       .then((result) => {
-        res.redirect("/items");
+         res.redirect('/items/create')
       })
       .catch((err) => {
         console.log(err);
       });
 };
 
+const item_delete = (req, res) => {
+  const id = req.params.id;
+  Item.findByIdAndDelete(id)
+      .then((result) => res.json({ item: result, id}))
+      .catch((err) => console.log(err));
+}
+
+const item_update = (req, res) => {
+    const id = req.params.id;
+    const isComplete = !req.body.isComplete;
+    Item.findByIdAndUpdate(id, { isComplete }, { new: true })
+        .then((result) => res.json({ item: result, id , title: 'All items'}))
+        .catch((err) => console.log(err));
+}
+
 module.exports = {
-  item_create_post,
   items_get,
+  item_create_post,
+  item_delete,
+  item_update
 };

@@ -9,6 +9,7 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.use(express.static('public'))
+app.use(express.static('utils'))
 app.use(express.urlencoded({ extended: true }))
 
 const dbURI = process.env.DBURI

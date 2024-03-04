@@ -9,10 +9,12 @@
       <div class="task-container">
         <% if(items.length > 0) { %> <% items.forEach(item => { %>
         <div class="task-item">
-          <p><%= item.name %></p>
-          <form action="#">
-            <button class="done">Mark as complete</button>
-            <button class="delete">Delete</button>
+          <p class="task <%= item.isComplete ? 'complete' : ''%>"><%= item.name %></p>
+          <form>
+            <button class="done" data-doc="<%= item.id%>">
+              Mark as complete
+            </button>
+            <button class="delete" data-doc="<%= item.id%>">Delete</button>
           </form>
         </div>
         <% }); %> <% } else { %>
@@ -20,5 +22,7 @@
         <% } %>
       </div>
     </div>
+
+    <script src="/main.js"></script>
   </body>
 </html>
