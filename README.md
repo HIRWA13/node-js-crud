@@ -6,10 +6,10 @@ it is a simple CRUD application that I wrote to practice my skills.
 
 ##  Key features: 
  with this application you can:
-- create a new task
-- read all the tasks
-- read a specific task
-- update a task by marking it as completed
+- add a new items
+- read all items
+- read a specific item
+- update an item by marking it as not needed from the list
 
 ## Technologies used:
 - Node js
