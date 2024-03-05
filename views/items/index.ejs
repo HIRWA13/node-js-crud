@@ -5,14 +5,16 @@
     <%- include('../partials/nav.ejs')%>
 
     <div class="all-tasks">
-      <h1 class="all-tasks-title">All tasks</h1>
+      <h1 class="all-tasks-title">All Items</h1>
       <div class="task-container">
         <% if(items.length > 0) { %> <% items.forEach(item => { %>
         <div class="task-item">
-          <p class="task <%= item.isComplete ? 'complete' : ''%>"><%= item.name %></p>
+         <a href="/items/<%= item.id%>">
+           <p class="task <%= item.isComplete ? 'complete' : ''%>"><%= item.name %></p>
+         </a>
           <form>
             <button class="done" data-doc="<%= item.id%>">
-              Mark as complete
+              Brought ?
             </button>
             <button class="delete" data-doc="<%= item.id%>">Delete</button>
           </form>
