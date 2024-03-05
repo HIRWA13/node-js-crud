@@ -112,6 +112,13 @@ body {
   transition: ease-in-out .2s;
 }
 
+.task-item a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  width: 80%;
+}
+
 .task-item p {
   font-size: 18px;
   color: #333;
@@ -121,6 +128,7 @@ body {
   display: flex;
   gap: 10px;
 }
+
 .delete {
   background-color: #dc3545;
 }
@@ -133,7 +141,7 @@ body {
 .complete {
   text-decoration: line-through;
 }
-/* add a new task styles  */
+/* add a new item styles  */
 
 .new-task {
   display: flex;
@@ -163,6 +171,16 @@ body {
   border-radius: 5px;
   border: 1px solid #ccc;
   outline: none;
+}
+
+.add-task textarea {
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
 }
 
 .add-task button {
@@ -213,4 +231,40 @@ body {
 .fab {
   border: 1px solid black;
   padding: 5px;
+}
+
+
+/* details page */
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.details h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.details p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.details .description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.details .price {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
 }
