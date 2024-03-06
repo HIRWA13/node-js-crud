@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs')%>
+  <body>
+    <div class="edit-item">
+      <%- include('../partials/nav.ejs')%>
+      <section class="add-task container">
+        <h1 class="add-task-title">Add new Item</h1>
+        <form class="task-form" action="/items" method="POST">
+          <input type="text" name="name" placeholder="<%= item.name%>" required/>
+          <textarea name="description" cols="30" rows="10" placeholder="<%= item.description>" required></textarea>
+          <input type="text" name="price" placeholder="<%= item.price%>" />
+          <button>Edit item</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
